@@ -1,4 +1,5 @@
 ﻿using CourierSerive.Models.Entities;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -7,7 +8,7 @@ using System.Web;
 
 namespace CourierSerive.Context
 {
-    public class CourierDbContext:DbContext
+    public class CourierDbContext:IdentityDbContext<ApplicationUser>
     {
         public CourierDbContext():base("name=CourierDbContext") 
         { 
